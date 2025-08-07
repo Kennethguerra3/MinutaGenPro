@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="main-container">
       <header>
-        <h1>🎙️ MinutaGen Pro (Next.js)</h1>
+        <h1>🎙️ MinutaGen Pro</h1>
         <p>Tu asistente IA para generar minutas de reunión, desde un archivo o en tiempo real.</p>
       </header>
       
