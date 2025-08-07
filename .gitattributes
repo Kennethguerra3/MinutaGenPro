@@ -3,3 +3,4 @@
 # Archivos de entorno y secretos
 .env.local
 service-account-key.json
+.env
