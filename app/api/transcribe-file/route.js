@@ -15,7 +15,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const geminiModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
 // IMPORTANTE: Reemplaza esto con el nombre exacto de tu bucket de GCS
-const BUCKET_NAME = "minutagen-pro-audios-kenne-45549055"; 
+const BUCKET_NAME = "minutagen-pro-audios-kenne"; 
 
 const GEMINI_PROMPT_TEMPLATE = `
 Actúa como un asistente ejecutivo altamente competente, encargado de documentar una reunión de trabajo.
