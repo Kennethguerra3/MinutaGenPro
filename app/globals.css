@@ -1,0 +1,265 @@
+/* --- Reseteo Básico y Variables de Color --- */
+:root {
+  --primary-blue: #1a73e8;
+  --hover-blue: #185abc;
+  --light-blue: #e8f0fe;
+  --text-primary: #333;
+  --text-secondary: #5f6368;
+  --background-color: #f0f2f5;
+  --container-bg: #ffffff;
+  --border-color: #ddd;
+  --light-gray-bg: #f8f9fa;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+/* --- Contenedor Principal y Encabezado --- */
+.main-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--container-bg);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: var(--primary-blue);
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1.1em;
+  margin-top: 8px;
+}
+
+/* --- Sistema de Pestañas (Tabs) --- */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-secondary);
+  position: relative;
+  top: 2px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.tab-button.active {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* --- Controles (Botones, Carga de Archivos y URL) --- */
+.live-controls, .url-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.url-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--hover-blue);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #b0b8c1;
+  cursor: not-allowed;
+}
+
+.file-upload-wrapper {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--light-gray-bg);
+}
+
+.file-upload-wrapper:hover {
+  border-color: var(--primary-blue);
+  background-color: var(--light-blue);
+}
+
+#file-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* --- Cajas de Estado y Resultados --- */
+.status-box {
+  background-color: var(--light-gray-bg);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  color: var(--text-secondary);
+  text-align: center;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.transcript-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.transcript-header h4 {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.download-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #d0e2ff;
+    transform: none; /* Evitar que el botón salte */
+}
+
+.transcript-box {
+  min-height: 60px;
+  background-color: var(--light-gray-bg);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  color: var(--text-primary);
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+section.visible {
+  margin-top: 30px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.final-minutes-output {
+  background-color: var(--container-bg);
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.final-minutes-output h1,
+.final-minutes-output h2 {
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 8px;
+  margin-top: 20px;
+}
+
+.final-minutes-output table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.final-minutes-output th,
+.final-minutes-output td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: left;
+}
+
+.final-minutes-output th {
+  background-color: var(--light-gray-bg);
+}
+
+/* --- Loader/Spinner --- */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-blue);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 25px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
